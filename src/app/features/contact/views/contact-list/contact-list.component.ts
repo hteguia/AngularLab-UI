@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ContactHttpService } from '../../services/contact.http.service';
+import { ContactHttpService } from '../../contact.http.service';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 

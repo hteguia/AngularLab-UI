@@ -8,7 +8,6 @@ import { map, Observable } from "rxjs";
 export class ContactHttpService {
     private readonly http = inject(HttpClient);
    
-    
     getContacts() : Observable<any> {
         return this.http.get('http://localhost:3000/contacts');
     }
