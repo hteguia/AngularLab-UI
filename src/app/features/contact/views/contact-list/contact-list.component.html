@@ -1,0 +1,30 @@
+<table class="table-auto">
+    <thead>
+        <tr>
+            <th class="px-4 py-2">First Name</th>
+            <th class="px-4 py-2">Last Name</th>
+            <th class="px-4 py-2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of (contacts$ | async) ; track item) {
+            <tr>
+                <td class="border px-4 py-2">{{ item.lastName }}</td>
+                <td class="border px-4 py-2">{{ item.firstName }}</td>
+                <td class="border px-4 py-2">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-1">Edit</button>
+                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-1">Delete</button>
+                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-1" (click)="showContactDetails(item)">Details</button>
+                </td>
+            </tr>     
+        }
+</tbody>
+</table>
+
+@if(contactDetails) {
+    <div>
+        first name: {{ contactDetails.firstName }}
+        last Name : {{ contactDetails.lastName }}
+    </div>
+}
+

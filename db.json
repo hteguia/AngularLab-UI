@@ -1,0 +1,14 @@
+{ 
+    "contacts": [
+      {
+        "id": 1,
+        "firstName": "Herve",
+        "lastName": "KAMDJO"
+      },
+      {
+        "id": 2,
+        "firstName": "Elian",
+        "lastName": "TEGUIA"
+      }
+    ]
+  }
